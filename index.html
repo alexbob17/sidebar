@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="http://fonts.cdnfonts.com/css/georgia" rel="stylesheet">
+  </head>
+  <body>
+    
+    <nav class="sidebar-menu">
+      <div class="text">Isabel Moya</div>
+      <ul class="nav-list__menu">
+        <li>
+          <a href="#" class="feat-btn">Architecture
+            <span class="fas fa-caret-down first"></span>
+          </a>
+          <ul class="feat-show">
+            <li><a href="#">Baraka Book</a></li>
+            <li><a href="#">Sestao</a></li>
+            <li><a href="#">Casablanco</a></li>
+            <li><a href="#">London</a></li>
+            <li><a href="#">Barcelona</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="feat-btn">Interior Design
+            <span class="fas fa-caret-down first"></span>
+          </a>
+          <ul class="feat-show">
+            <li><a href="#">Red</a></li>
+            <li><a href="#">Grey</a></li>
+            <li><a href="#">Blue</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="serv-btn">Fine Arts
+
+            <span class="fas fa-caret-down second"></span>
+          </a>
+          <ul class="serv-show">
+            <li><a href="#">Cartograpgy</a></li>
+            <li><a href="#">Assemblies</a></li>
+            <li><a href="#">Poster</a></li>
+            <li><a href="#">Section</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="serv-btn">Publications
+
+            <span class="fas fa-caret-down second"></span>
+          </a>
+          <ul class="serv-show">
+            <li><a href="#">Inhabited Codes</a></li>
+            <li><a href="#">Architecture</a></li>
+          </ul>
+        </li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+    <div class="content_body">
+      <p>contenido y galerias aqui</p>
+
+      <div class="btn_icon">
+        <span class="fas fa-bars"></span>
+      </div>
+    </div>
+
+
+    <script>
+    $('.btn_icon').click(function(){
+      $(this).toggleClass("click");
+      $('.sidebar-menu').toggleClass("show");
+    });
+      $('.feat-btn').click(function(){
+        $('nav ul .feat-show').toggleClass("show");
+        $('nav ul .first').toggleClass("rotate");
+      });
+      $('.serv-btn').click(function(){
+        $('nav ul .serv-show').toggleClass("show1");
+        $('nav ul .second').toggleClass("rotate");
+      });
+      $('nav ul li').click(function(){
+        $(this).addClass("active").siblings().removeClass("active");
+      });
+    </script>
+
+  </body>
+</html>
